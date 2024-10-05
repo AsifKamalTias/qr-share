@@ -1,33 +1,49 @@
-This is a [Plasmo extension](https://docs.plasmo.com/) project bootstrapped with [`plasmo init`](https://www.npmjs.com/package/plasmo).
+<h1 align="center" id="title">QR Share</h1>
+<br/>
+<p id="description">A browser extension to share current link using qr code.
+</p>
 
-## Getting Started
+<h2>📷 Project Screenshots:</h2>
 
-First, run the development server:
+<img src="https://res.cloudinary.com/dhw3yod6h/image/upload/v1728140684/qr-share_s5ymb7.png" alt="project-screenshot">
 
-```bash
+<br/><br/>
+  
+<h2>🛠️ Installation Steps:</h2>
+
+<p>1. Install Node Packages</p>
+
+```
+pnpm install
+```
+<br/>
+<p>2. Run Project</p>
+
+```
 pnpm dev
-# or
-npm run dev
 ```
+<br/>
+<p>3. Open chrome browser and go to </p>
 
-Open your browser and load the appropriate development build. For example, if you are developing for the chrome browser, using manifest v3, use: `build/chrome-mv3-dev`.
-
-You can start editing the popup by modifying `popup.tsx`. It should auto-update as you make changes. To add an options page, simply add a `options.tsx` file to the root of the project, with a react component default exported. Likewise to add a content page, add a `content.ts` file to the root of the project, importing some module and do some logic, then reload the extension on your browser.
-
-For further guidance, [visit our Documentation](https://docs.plasmo.com/)
-
-## Making production build
-
-Run the following:
-
-```bash
-pnpm build
-# or
-npm run build
 ```
+chrome://extensions/
+```
+<br/>
 
-This should create a production bundle for your extension, ready to be zipped and published to the stores.
+<p>4. Turn on Developer mode </p>
+<br/>
 
-## Submit to the webstores
+<p>5. Browse and open </p>
 
-The easiest way to deploy your Plasmo extension is to use the built-in [bpp](https://bpp.browser.market) GitHub action. Prior to using this action however, make sure to build your extension and upload the first version to the store to establish the basic credentials. Then, simply follow [this setup instruction](https://docs.plasmo.com/framework/workflows/submit) and you should be on your way for automated submission!
+```
+build/chrome-mv3-dev
+```
+<br/>
+  
+<h2>⚙️ Built with</h2>
+
+
+Technologies used in the project:
+
+*   Plasmo
+*   react.qr
