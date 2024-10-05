@@ -1,6 +1,6 @@
 {
   "name": "qr-share",
-  "displayName": "Qr share",
+  "displayName": "Qr Share",
   "version": "0.0.1",
   "description": "A web extension to share current link using qr code.",
   "author": "AsifKamalTias",
@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "plasmo": "0.89.2",
+    "qrcode.react": "^4.0.1",
     "react": "18.2.0",
     "react-dom": "18.2.0"
   },
@@ -25,7 +26,7 @@
   },
   "manifest": {
     "host_permissions": [
-      "https://*/*"
+      "https://*/*", "tabs", "activeTab"
     ]
   }
 }

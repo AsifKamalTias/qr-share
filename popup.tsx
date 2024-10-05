@@ -1,24 +1,55 @@
-import { useState } from "react"
+import { QRCodeSVG } from "qrcode.react"
+import { useEffect, useState } from "react"
 
 function IndexPopup() {
-  const [data, setData] = useState("")
+  const [currentURL, setCurrentURL] = useState("")
+
+  useEffect(
+    () =>
+      chrome.tabs.query(
+        {
+          active: true,
+          currentWindow: true
+        },
+        function (tabs) {
+          const tab = tabs[0]
+          if (tab.url) {
+            setCurrentURL(tab.url)
+          }
+        }
+      ),
+    [chrome]
+  )
 
   return (
     <div
       style={{
-        padding: 16
+        width: 256
       }}>
-      <h2>
-        Welcome to your{" "}
-        <a href="https://www.plasmo.com" target="_blank">
-          Plasmo
-        </a>{" "}
-        Extension!
-      </h2>
-      <input onChange={(e) => setData(e.target.value)} value={data} />
-      <a href="https://docs.plasmo.com" target="_blank">
-        View Docs
-      </a>
+      <h1
+        style={{
+          margin: 0,
+          paddingLeft: 10,
+          paddingRight: 10,
+          paddingTop: 5,
+          paddingBottom: 5,
+          background: "linear-gradient(45deg, #58a2eb, #d069ca, #ed5572)",
+          color: "#FFFFFF",
+          borderRadius: 50,
+          display: "flex",
+          alignItems: "center"
+        }}>
+        QR Share
+      </h1>
+      <div
+        style={{
+          margin: 20,
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center"
+        }}>
+        <QRCodeSVG value={currentURL} />
+      </div>
     </div>
   )
 }
