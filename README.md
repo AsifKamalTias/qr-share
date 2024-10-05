@@ -7,7 +7,7 @@
 
 <img src="https://res.cloudinary.com/dhw3yod6h/image/upload/v1728140684/qr-share_s5ymb7.png" alt="project-screenshot">
 
-<br/><br/>
+<br/>
   
 <h2>🛠️ Installation Steps:</h2>
 
