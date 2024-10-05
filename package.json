@@ -2,7 +2,7 @@
   "name": "qr-share",
   "displayName": "Qr Share",
   "version": "0.0.1",
-  "description": "A web extension to share current link using qr code.",
+  "description": "A browser extension to share current link using qr code.",
   "author": "AsifKamalTias",
   "scripts": {
     "dev": "plasmo dev",
